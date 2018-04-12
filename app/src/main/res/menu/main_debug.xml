@@ -1,7 +1,16 @@
-<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
     <item
         android:id="@+id/menu_main_debug_create_default_records"
         android:orderInCategory="1"
-        android:showAsAction="always"
+        app:showAsAction="ifRoom"
         android:title="@string/menu_main_debug_create_default_records"/>
+
+    <item
+        android:id="@+id/menu_main_debug_send_data"
+        android:orderInCategory="2"
+        app:showAsAction="ifRoom"
+        android:title="@string/menu_main_debug_send_data"/>
 </menu>

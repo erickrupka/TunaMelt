@@ -2,11 +2,13 @@ package org.krupkas.tunamelt;
 
 import android.app.Activity;
 import android.app.DialogFragment;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
+import android.text.method.ScrollingMovementMethod;
 
 import com.google.gson.Gson;
 
@@ -26,7 +28,8 @@ public class MainDebug extends Activity {
         setContentView(R.layout.main_debug);
         getActionBar().setDisplayHomeAsUpEnabled(true);
 
-        debugTextView = (TextView) findViewById(R.id.main_debug);
+        debugTextView = findViewById(R.id.main_debug);
+        debugTextView.setMovementMethod(new ScrollingMovementMethod());
         displayDebugInfo(debugTextView);
     }
 
@@ -53,7 +56,12 @@ public class MainDebug extends Activity {
                 DialogFragment newFragment = CreateDefaultRecordsFragment.newInstance();
                 newFragment.show(getFragmentManager(), "dialog");
                 return true;
-     
+
+            case R.id.menu_main_debug_send_data:
+                Intent i = new Intent(this,MainDebugSendData.class);
+                startActivity(i);
+                return true;
+
         default:
             return super.onOptionsItemSelected(item);
         }
@@ -61,7 +69,7 @@ public class MainDebug extends Activity {
     }
 
     public void noop() {
-        ; // do nothing
+        // do nothing
     }
 
     public void addDefaultRecords(){
@@ -167,21 +175,6 @@ public class MainDebug extends Activity {
             }
         }
 
-        // JSON representation of the first tmRec
-        Gson gson = new Gson();
-        String tmRecJson = "no tmRec";
-        if (!tmRecords.isEmpty()) {
-            tmRecJson = gson.toJson(tmRecords.get(0));
-        }
-
-        /* TODO send data to outside world
-        Intent sendIntent = new Intent();
-        sendIntent.setAction(Intent.ACTION_SEND);
-        sendIntent.putExtra(Intent.EXTRA_TEXT, tmRecJson);
-        sendIntent.setType("text/plain");
-        startActivity(Intent.createChooser(sendIntent, getResources().getText(R.string.send_to)));
-        */
-
         // test json-to-object
         //TMRecord testTmRec = gson.fromJson(tmRecJson, TMRecord.class);
 
@@ -192,7 +185,6 @@ public class MainDebug extends Activity {
                         + "Number of orphan photos = " + orphanFilenames.size() + "\n"
                         + "Number of orphans deleted = " + numOrphansDeleted + "\n"
                         + "Number of orphans not deleted = " + numOrphansNotDeleted + "\n"
-                        + "tmRec[0] json = " + tmRecJson + "\n"
 
                 //+ "Good file names:" + goodPhotoFilenames + "\n"
                 //+ "Orphan file names:" + orphanFilenames + "\n"
