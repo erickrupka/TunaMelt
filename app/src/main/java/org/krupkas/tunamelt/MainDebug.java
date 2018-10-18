@@ -1,16 +1,14 @@
 package org.krupkas.tunamelt;
 
-import android.app.Activity;
 import android.app.DialogFragment;
 import android.content.Intent;
 import android.os.Bundle;
+import android.app.Activity;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
 import android.text.method.ScrollingMovementMethod;
-
-import com.google.gson.Gson;
 
 import java.io.File;
 import java.util.ArrayList;
