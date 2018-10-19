@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" >
+    
+    <!--  photo on the left, sub-layout on the right -->
+    <ImageView
+			android:id="@+id/tmrec_brief_photo"
+			android:contentDescription="@string/tuna_melt_photo"
+    		android:layout_width="75dp" 
+    		android:layout_height="75dp" 
+    		android:gravity="top|left"
+    />
+    
+    <!-- a shim, do not put anything in this view -->
+    <TextView
+			android:id="@+id/tmrec_brief_shim"
+			android:layout_width="10dp" 
+    		android:layout_height="wrap_content" 
+    		android:layout_toRightOf="@+id/tmrec_brief_photo"
+    />
+    
+    <RelativeLayout
+    	android:layout_width="match_parent"
+    	android:layout_height="match_parent"
+    	android:orientation="vertical" 
+    	android:layout_toRightOf="@+id/tmrec_brief_shim"
+	>
+    
+    	<TextView
+			android:id="@+id/tmrec_brief_restaurant"
+			android:layout_width="fill_parent" 
+    		android:layout_height="wrap_content" 
+    		android:textSize="20sp"
+    	/>
+    	<TextView
+			android:id="@+id/tmrec_brief_dish_name"
+			android:layout_width="fill_parent" 
+    		android:layout_height="wrap_content" 
+    		android:textSize="20sp"
+    		android:layout_below="@+id/tmrec_brief_restaurant"
+    	/>
+    	
+    	<RelativeLayout
+    		android:layout_width="fill_parent"
+    		android:layout_height="match_parent"
+    		android:orientation="horizontal" 
+    		android:layout_below="@+id/tmrec_brief_dish_name"
+		>
+    		<TextView
+				android:id="@+id/tmrec_brief_rating"
+				android:layout_width="wrap_content"
+    			android:layout_height="wrap_content"
+    			android:textSize="20sp"
+    		/>
+    		<TextView
+				android:id="@+id/tmrec_brief_price"
+				android:layout_width="80dp"
+    			android:layout_height="wrap_content"
+    			android:textSize="20sp"
+    			android:layout_alignParentRight="true"
+    		/>
+		
+    	</RelativeLayout>
+    	    
+    </RelativeLayout>
+ 
+</RelativeLayout>

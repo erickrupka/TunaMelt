@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <string-array name="sort_by_options">
+        <item name="restaurant">Restaurant</item>
+        <item name="dishName">Dish Name</item>
+        <item name="rating">Rating</item>
+    </string-array>
+    
+    <string-array name="sort_by_values">
+        <item name="restaurant">Restaurant</item>
+        <item name="dishName">dishName</item>
+        <item name="rating">rating</item>
+    </string-array>
+    
+    
+    <string-array name="sort_order_options">
+        <item name="ascending">Ascending</item>
+        <item name="descending">Descending</item>
+    </string-array>
+    
+    <string-array name="sort_order_values">
+        <item name="ascending">Ascending</item>
+        <item name="descending">Descending</item>
+    </string-array>
+    
+</resources>

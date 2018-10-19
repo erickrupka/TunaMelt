@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">TunaMelt</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+
+    <!-- main action bar -->
+    <string name="menu_main_settings">Settings</string>
+    <string name="menu_main_help">Help</string>
+    <string name="menu_main_about">About TunaMelt</string>
+    <string name="menu_main_map">Map</string>
+    <string name="menu_main_add">Add Tuna Melt</string>
+    <string name="menu_main_search">Search</string>
+    <string name="menu_main_debug">Debug</string>
+
+    <!-- details activity action bar -->
+    <string name="menu_details_edit">Edit</string>
+    <string name="menu_details_delete">Delete</string>
+    <string name="menu_details_help">Help</string>
+
+    <!-- edit activity action bar -->
+    <string name="menu_edit_cancel">Cancel</string>
+    <string name="menu_edit_help">Help</string>
+
+    <!-- main debug action bar -->
+    <string name="menu_main_debug_create_default_records">Create Default Records</string>
+    <string name="menu_main_debug_send_data">Send Data</string>
+    <string name="recipient_name">Name</string>
+    <string name="recipient_email">Email</string>
+    
+    <!-- activity names -->
+    <string name="title_activity_tuna_melt_map">Locations</string>
+    <string name="title_activity_edit_tuna_melt">Edit Tuna Melt</string>
+    <string name="title_activity_show_details">Details</string>
+    <string name="title_activity_full_screen_photo">Photo</string>
+    <string name="title_activity_about_tuna_melt">About TunaMelt</string>
+    <string name="title_activity_main_help">Help</string>
+    <string name="title_activity_main_debug">Debug</string>
+    <string name="title_activity_main_debug_send_data">Send Data</string>
+    <string name="title_activity_details_help">Help</string>
+    <string name="title_activity_edit_help">Help</string>
+    <string name="title_activity_user_prefs">Settings</string>
+    <string name="title_activity_search">Search</string>
+
+    <!-- intent extras keys -->
+    <!-- for main to ShowDetails: TMRecord -->
+    <string name="intent_extra_key_one_tm">OneTm</string>
+    <!-- for ShowDetails to main: boolean -->
+    <string name="intent_extra_key_data_changed">DataChanged</string>
+    <!-- for ShowDetails to EditTMRec and EditTMRec internal pause/resume: TMRecord -->
+    <string name="intent_extra_key_orig_tm_rec">OrigTmRec</string>
+    <string name="intent_extra_key_curr_tm_rec">CurrTmRec</string>
+    <!-- for main to EditTmRec and for ShowDetails to EditTmRec -->
+    <string name="intent_extra_key_do_add">DoAdd</string>
+    <string name="intent_extra_key_new_photo_filename">NewPhotoFilename</string>
+    <!-- for ShowDetails to FullScreenPhoto -->
+    <string name="intent_extra_key_full_screen_photo_filename">FullScreenPhotoFilename</string>
+
+    <!-- misc -->
+    <string name="tuna_melt_photo">Tuna Melt Photo</string>
+    <string name="photo_dir">photos</string>  <!-- must match value in filepaths.xml -->
+    <string name="tempData_dir">tempData</string> <!-- must match value in filepaths.xml -->
+    <string name="delete_are_you_sure">Delete Tuna Melt?</string>
+    <string name="search_hint">Search TunaMelt</string>
+    <string name="send_to">Send TunaMelt using</string>
+    <string name="cannot_save_photo">Cannot save photo</string>
+    <string name="send_button_text">Send</string>
+
+    <!-- preferences -->
+    <string name="pref_sort_by">PREF_SORT_BY</string>
+    <string name="pref_sort_order">PREF_SORT_ORDER</string>
+    <string name="pref_dummy_data">PREF_DUMMY_DATA</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+
+</resources>

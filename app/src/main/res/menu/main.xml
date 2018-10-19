@@ -1,0 +1,47 @@
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+
+     <item
+        android:id="@+id/menu_main_add"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="@string/menu_main_add"/>
+     
+     <item
+        android:id="@+id/menu_main_settings"
+        android:orderInCategory="101"
+        android:showAsAction="never"
+        android:title="@string/menu_main_settings"/>
+     
+      <item
+        android:id="@+id/menu_main_help"
+        android:orderInCategory="102"
+        android:showAsAction="never"
+        android:title="@string/menu_main_help"/>
+      
+     <item
+        android:id="@+id/menu_main_about"
+        android:orderInCategory="103"
+        android:showAsAction="never"
+        android:title="@string/menu_main_about"/>
+
+    <item
+        android:id="@+id/menu_main_debug"
+        android:orderInCategory="104"
+        android:showAsAction="never"
+        android:title="@string/menu_main_debug"/>
+    
+    <item
+        android:id="@+id/menu_main_map"
+        android:orderInCategory="1"
+        android:showAsAction="always"
+        android:title="@string/menu_main_map"/>
+
+    <item
+        android:id="@+id/menu_main_search"
+        android:actionViewClass="android.widget.SearchView"
+        android:icon="@android:drawable/ic_menu_search"
+        android:showAsAction="collapseActionView|ifRoom"
+        android:title="@string/title_activity_search" />
+
+</menu>
